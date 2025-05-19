@@ -1,4 +1,5 @@
-﻿using Microsoft.SqlServer.Server;
+﻿using BasicMathCalculator.Basic;
+using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace BasicMathCalculator
 	{
 		static void Main(string[] args)
 		{
+			Addition addition = new Addition();
+
 			Console.Write("Hey There! May I know your name?: ");
 			var Name = Console.ReadLine();
 
@@ -21,43 +24,47 @@ namespace BasicMathCalculator
 			PreviewName = char.ToUpper(PreviewName[0]) + PreviewName.Substring(1).ToLower().Trim();
 
 			Console.WriteLine("******************************************************************************");
-			Console.Write($"Good Moarnning {PreviewName}, Its {Date} And What You Are Looking For: \n" + 
-				$"\nA. Addition" + 
-				$"\nB. Substraction" + 
-				$"\nC. Multipication" + 
-				$"\nD. Division" + 
-				$"\nE. Percentage" + 
-				$"\nQ. Quit The Programme" + 
-				$"\n\n   Choose The Option: " );
+			Console.Write($"Good Moarnning {PreviewName}, Its {Date} And What You Are Looking For: \n" +
+				$"\nA. Addition" +
+				$"\nB. Substraction" +
+				$"\nC. Multipication" +
+				$"\nD. Division" +
+				$"\nE. Percentage" +
+				$"\nQ. Quit The Programme" +
+				$"\n\n   Choose The Option: ");
 			char option = Console.ReadLine()[0];
 
 			Console.WriteLine("");
 
 			option = char.ToUpper(option);
 
-			if(option == 'A')
+			if (option == 'A' || option == '1')
 			{
-				Console.WriteLine("Addition Here");
+				addition.Add();
 			}
-			else if(option == 'B')
+			else if(option == 'B' || option == '2')
 			{
 				Console.WriteLine("Substraction Here");
 			}
-			else if(option == 'C')
+			else if(option == 'C' || option == '3')
 			{
 				Console.WriteLine("Mulltipication Here");
 			}
-			else if(option == 'D')
+			else if(option == 'D' || option == '4')
 			{
 				Console.WriteLine("Division Here");
 			}
-			else if (option == 'E')
+			else if (option == 'E' || option == '5')
 			{
 				Console.WriteLine("Percentage Here");
 			}
-			else if(option == 'Q')
+			else if(option == 'Q' || option == '6')
 			{
 				Environment.Exit(0); 
+			}
+			else
+			{
+				Console.WriteLine("Invalid Selection, Please Try Again!");
 			}
 			Console.ReadKey();
 
