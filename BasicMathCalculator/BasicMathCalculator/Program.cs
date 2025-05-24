@@ -13,6 +13,9 @@ namespace BasicMathCalculator
 		static void Main(string[] args)
 		{
 			Addition addition = new Addition();
+			Multipication multipication = new Multipication();
+			Substraction substraction = new Substraction();
+			Division division = new Division();
 
 			Console.Write("Hey There! May I know your name?: ");
 			var Name = Console.ReadLine();
@@ -44,15 +47,15 @@ namespace BasicMathCalculator
 			}
 			else if(option == 'B' || option == '2')
 			{
-				Console.WriteLine("Substraction Here");
+				substraction.Subtract();
 			}
 			else if(option == 'C' || option == '3')
 			{
-				Console.WriteLine("Mulltipication Here");
+				multipication.Multi();
 			}
 			else if(option == 'D' || option == '4')
 			{
-				Console.WriteLine("Division Here");
+				division.Div();
 			}
 			else if (option == 'E' || option == '5')
 			{
