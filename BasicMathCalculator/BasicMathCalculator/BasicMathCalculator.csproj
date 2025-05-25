@@ -46,6 +46,7 @@
     <Compile Include="Basic\Addition.cs" />
     <Compile Include="Basic\Division.cs" />
     <Compile Include="Basic\Multipication.cs" />
+    <Compile Include="Basic\Percentage.cs" />
     <Compile Include="Basic\Substraction.cs" />
     <Compile Include="Global\Global.cs" />
     <Compile Include="Program.cs" />

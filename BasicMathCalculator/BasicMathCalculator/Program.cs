@@ -16,6 +16,7 @@ namespace BasicMathCalculator
 			Multipication multipication = new Multipication();
 			Substraction substraction = new Substraction();
 			Division division = new Division();
+			Percentage percentage = new Percentage();
 
 			Console.Write("Hey There! May I know your name?: ");
 			var Name = Console.ReadLine();
@@ -59,7 +60,7 @@ namespace BasicMathCalculator
 			}
 			else if (option == 'E' || option == '5')
 			{
-				Console.WriteLine("Percentage Here");
+				percentage.Perc();
 			}
 			else if(option == 'Q' || option == '6')
 			{
