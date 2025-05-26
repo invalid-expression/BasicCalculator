@@ -9,6 +9,7 @@ namespace BasicMathCalculator.Basic
 	public class Addition
 	{
 		double num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, Total;
+		char exit;
         public void Add()
 		{
 			Console.Write("Are You Want To Do More Then 2-Number's Addition? (Y-N): ");
@@ -90,6 +91,12 @@ namespace BasicMathCalculator.Basic
 			}
 			else if(Response == 'N')
 			{
+				Console.Clear();
+				Console.WriteLine();
+				Console.WriteLine("\nAddition");
+
+				Console.WriteLine("******************************************************************************");
+
 				Console.Write(Global.Global.FIRN);
 				num1 = Convert.ToInt32(Console.ReadLine());
 
@@ -98,6 +105,10 @@ namespace BasicMathCalculator.Basic
 
 				Total = num1 + num2;
 				Console.WriteLine($"Your Total: {Total}");
+			}
+			else
+			{
+				Console.WriteLine("Wrong Input! Try Again, Press ENTER For Exit");
 			}
 		}
 	}
